@@ -1,0 +1,167 @@
+/* 去除浏览器预设外边距 */
+* {
+	margin: 0px;
+}
+/* 字体设置 */
+@font-face {
+	font-family: 'Iosevka Web';
+	src: url('../fonts/iosevka-regular.woff2');
+}
+@font-face {
+	font-family: 'Iosevka Web';
+	src: url('../fonts/iosevka-bold.woff2');
+	font-weight: bold;
+}
+html {
+	font-family: 'Iosevka Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* 导航栏 */
+.navbar {
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.8);
+	margin: auto;
+}
+.li {
+	width: 150px;
+	padding: 3px 20px 0 20px;
+	display: inline-block;
+	font-size: 1.5em;
+	line-height: 35px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	transition: color 0.4s;
+}
+#logo {
+	text-align: left;
+	width: 250px;
+	font-size: 3em;
+	color: lightblue;
+}
+.li .tageng {
+	font-size: 0.75em;
+	line-height: 25px;
+	font-weight: initial;
+}
+.li:hover {
+	color: yellowgreen;
+	cursor: pointer;
+}
+.active{
+	color: lightsalmon;
+}
+/* 大图 */
+#bg {
+	position: absolute;
+	background: url('img/bg.jpg') repeat-y fixed;
+	width: 100%;
+	height: 2250px;
+}
+/* section 的高度 */
+section {
+	height: 2250px;
+}
+/* 设置文字框 */
+.box1 {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 1000px;
+	position: relative;
+	top: 120px;
+	padding: 100px;
+	color: white;
+	font-size: 1em;
+}
+#b2 {
+	position: relative;
+	top: 150px;
+}
+#b3 {
+	position: relative;
+	top: 180px;
+}
+#b4 {
+	position: relative;
+	top: 210px;
+}
+#b5 {
+	position: relative;
+	top: 240px;
+}
+/* 标题及文字样式 */
+h1 {
+	font-size: 2.25em;
+	line-height: 2em;
+}
+h2 {
+	font-size: 2em;
+	line-height: 1.7em;
+}
+h3 {
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+p, span, blockquote, li {
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+code {
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: 'Iosevka Web', 'Segoe UI Light', monospace;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: lightgray;
+	font-size: 16px;
+	padding: 0 3px;
+	border-radius: 2px;
+}
+.blockCode {
+	display: block;
+	margin: 5px 0;
+	padding: 3px 10px;
+}
+/*
+.bqbox {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-indent: 1.5em;
+	border-left: 5px lightgray solid;
+}
+*/
+ol, ul {
+	margin: 10px 0;
+}
+/* 链接样式 */
+.txt {
+	font-size: 1em;
+	line-height: 1.5em;
+	border-bottom: dashed gray;
+	color: skyblue;
+	text-decoration: none;
+	transition: border-bottom 0.3s, color 0.3s;
+}
+.txt:hover {
+	border-bottom: solid darkseagreen;
+	color: yellow;
+}
+/* 底部 */
+.footbar {
+	background: rgb(32, 32, 32);
+	color: lightgray;
+	padding: 20px 40px;
+	font-size: 14px;
+	line-height: 26px;
+}
+.footbar a {
+	border-bottom: linen dashed 1px;
+	padding: 2px 4px;
+	color: lightgray;
+	text-decoration: none;
+	transition: color 0.4s, background-color 0.4s;
+}
+.footbar a:hover {
+	color: silver;
+	background-color: black;
+}
