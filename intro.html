@@ -3,6 +3,14 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/main.css">
+    <style>
+		section {
+		height: 4150px;
+		}
+		#bg {
+			height: 4150px;
+		}
+	</style>
     <title>Demo | Introduction</title>
 </head>
 <body>
@@ -18,10 +26,6 @@
 				介绍
 				<div class="tageng">Intro</div>
 			</div></a>
-			<div class="li">
-				子页 2
-				<div class="tageng">Page 2</div>
-			</div>
 			<a class="taglink" href="acks.html"><div class="li">
 				致谢
 				<div class="tageng">ACKs</div>
@@ -43,14 +47,14 @@
 		<div class="box1" id="b2">
             <p>上下滚动网页，你会发现本站的网页均由 3 个主要部分组成。</p>
             <ul>
-                <li>顶部的菜单栏（页眉），滚动网页时不移动；</li>
+                <li>顶部的导航栏（页眉），滚动网页时不移动；</li>
                 <li>中部的主要内容，其背景图滚动网页时不移动；</li>
                 <li>底部的页脚，包含与本项目有关的链接。</li>
             </ul>
 			<p>这 3 个部分，分别使用 3 个元素 <code>header</code>、<code>section</code> 和 <code>footer</code> 编写。
-			<br />HTML 网页中的所有可显示出的内容，全部都是元素。
-			<br />如你所见，这里写的 4 行文字，都在一个 <code>p</code> 元素的两个标签之内。
-			<br />元素分为单标记元素和双标记元素，它们的区别在于……</p>
+				<br />HTML 网页中的所有可显示出的内容，全部都是元素。
+				<br />如你所见，这里写的 4 行文字，都在一个 <code>p</code> 元素的两个标签之内。
+				<br />元素分为单标记元素和双标记元素，它们的区别在于……</p>
 			<code class="blockCode">
 &lt;p&gt;这是一个双标记元素，首尾分别有一个标记，各表示元素的开始和结束。&lt;/p&gt;
 <br />
@@ -58,13 +62,65 @@
 			</code>
 		</div>
 		<div class="box1" id="b3">
-			<p>Vestibulum ut tortor vel risus lacinia placerat. Quisque ac tempus diam. Nullam vestibulum, ex ut laoreet accumsan, nunc arcu dignissim sapien, egestas ultricies ante turpis quis ipsum. Pellentesque eleifend lacinia nulla bibendum sollicitudin. Nulla mattis dui leo, ac finibus odio iaculis vitae. Etiam vitae risus viverra, blandit diam id, ultrices ligula. Integer ut nisi ante. Proin elementum placerat odio, eget ultrices neque rutrum id. Integer justo mauris, iaculis in dui et, commodo viverra diam. Ut hendrerit pretium aliquam. Etiam suscipit, tellus quis aliquet faucibus, risus dolor mollis augue, quis accumsan tellus sem nec est. Nam mattis sem at tortor vehicula posuere. Nam rutrum nisl urna.</p>
+			<p>源代码中，我们用一个 <code>class</code> 为 <code>navbar</code> 的 <code>div</code> 元素来制作导航栏。
+				<br /><code>div</code> 元素是一个没有实际意义的块元素。块元素独占一行，我们可以给它设置上下左右任意方向的内外边距。
+				<br />导航栏中的每一个部分，包括左边的 <strong>DEMO</strong> 大字和右边的菜单项，它们的 <code>class</code> 属性均包含 <code>li</code> 这个名字。
+				<br />上面所说的 <code>class</code> 和未提及的 <code>id</code>，均为 HTML 元素的属性。它们的存在让开发者得以对特定的元素设置显示样式。
+				<br />这两者的区别在于，<code>id</code> 具有唯一性，而 <code>class</code> 则不具有。全局上说，<code>id</code> 只能出现在一个特定的元素身上。
+				<br />开发者在 CSS 文件中通过形如 <code>.class</code>、<code>#id</code> 的方式指定特定元素并为其设定样式，<code>.</code> 和 <code>#</code> 符号因而分别被称为<strong>选择器</strong>。
+			</p>
+			<code class="blockCode">
+.类名{样式}
+<br />
+#id名{样式}
+			</code>
+			<p>
+				除此之外，直接使用元素名也可以设置样式，被称为元素选择器。这一点使用得也很常见：
+				<br />如果不加设置，根据 Google Chrome 等浏览器的预设，浏览器会自动给网页正文加入 8 像素的外边距，很影响美观。
+				<br />因此大部分网页在设置样式时，都会给正文部分设置外边距 <code>margin</code> 为 <code>0</code> 来覆盖掉浏览器的预设。
+				<br />实现这一点的 CSS 样式代码非常简单——
+				<code class="blockCode">
+body{margin: 0;}
+				</code>
+				如你所见，在此网站的网页中，这一点也得到了体现。
+			</p>
 		</div>
 		<div class="box1" id="b4">
-			<p>Duis ac ultricies tellus. Phasellus ut enim imperdiet, sagittis massa ut, elementum augue. Nullam et ullamcorper metus. Curabitur nec tortor eros. Quisque ac aliquet tellus. Mauris mollis tincidunt feugiat. Nunc in urna justo. Donec vel libero facilisis justo semper ultrices. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur pharetra erat lacus, non finibus velit malesuada nec. Praesent tristique enim elit, eu vehicula elit suscipit sed. Nulla gravida felis vel velit elementum, at posuere nibh ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla tristique venenatis odio, sed euismod dui fermentum at. Morbi laoreet enim ut nisi hendrerit cursus. Nulla at porta nisl, non imperdiet tellus.</p>
+			<p>接下来就是一个很复杂的部分——定位。
+				<br />每个元素在网页中都会有特定的位置来显示，比如这个网页中的每一个写有文字的黑色方块都分别设定了各自的位置。
+				<br />设定位置这项工作也需要开发者在 CSS 样式代码中完成，需要用到元素的<strong>定位</strong>属性，<code>position</code>。
+				<br />这个属性可以填入 5 个值：<code>static</code>、<code>relative</code>、<code>absolute</code>、<code>fixed</code> 以及 <code>sticky</code>。
+				<br />当然，<code>position</code> 属性的默认值为 <code>static</code>。这意味着，如果不设置属性值，则定位默认为 <code>static</code>。
+				<br />为了更加直观地展现这些值的效果，这里引用了 MDN Web Docs 所做的交互式控件，以供参考。
+				<br />回链：<a class="txt" href="https://interactive-examples.mdn.mozilla.net/pages/css/position.html" target="_blank">https://interactive-examples.mdn.mozilla.net/pages/css/position.html</a>
+			</p>
+			<iframe class="interactive" height="360" src="https://interactive-examples.mdn.mozilla.net/pages/css/position.html" title="MDN Web Docs Interactive Example" loading="lazy"></iframe>
+			<p>
+				<code>static</code> 作为默认值，它的效果最为普通：样式设置成咋样就咋样；
+				<br /><code>relative</code> 字面意思是 “相对的”，它表示在元素原本的位置（即设置为 <code>static</code> 时的位置）上加以调整；
+				<br /><code>absolute</code> 字面意思是 “绝对的”，它表示在相对于元素最近的父级元素设定位置；
+				<br /><code>fixed</code> 字面意思是 “固定的”，它表示元素相对于浏览器页面的位置不发生改变；
+				<br /><code>sticky</code> 字面意思是 “粘性的”，元素可完整显示在浏览器页面中的时候，该元素定位为 <code>relative</code>；当元素不能完整显示的时候（比如滚动到显示范围之外的时候），该元素定位为 <code>fixed</code>。这么说或许有点不容易理解，因此我做了一个控件来演示。
+				<br />链接：<a class="txt" href="https://codepen.io/eoinlidemo/pen/qBXOwyB/" target="_blank">https://codepen.io/eoinlidemo/pen/qBXOwyB/</a>
+			</p>
+			<iframe class="interactive" height="300" style="width: 100%;" scrolling="no" title="Sticky Position Demo" src="https://codepen.io/eoinlidemo/embed/qBXOwyB?default-tab=css%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/eoinlidemo/pen/qBXOwyB">
+  Sticky Position Demo</a> by eoinlidemo (<a href="https://codepen.io/eoinlidemo">@eoinlidemo</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+			</iframe>
+			<p>
+				上面两个演示中，或许你已经注意到，还设置了 <code>top</code> 和 <code>left</code> 两个属性，他们分别代表元素<strong>顶部和左侧</strong>偏移的大小。
+				<br />值得注意的是，这两个属性不会对 <code>position</code> 设置为 <code>static</code> 的元素生效。
+				<br /><br />
+				这个项目中，顶部的导航栏采用 <code>fixed</code> 定位，背景采用 <code>absolute</code> 定位，文字框采用 <code>relative</code> 定位。
+				<br />每一个文字框都通过 <code>id</code> 选择器分别设置了 <code>top</code> 属性的值，且分别递增 30 像素，这样能够保证相邻两个文字框之间的垂直间隔均为 30 像素。
+				<br />其逻辑在于，如果给文字框添加 <code>static</code> 定位，则所有的文字框将依次往下排放，中间没有空隙。第一个的文字框距离顶部有 120 像素高，为了保证文字框间距 30 像素，则需使用 <code>relative</code> 定位，将之后每一个文字框的 <code>top</code> 属性都递增 30 像素。
+				<br />视频后半部分的<strong style="color:lightcoral;">红色</strong>文字框表示文字框原本的位置，<strong style="color:lightgreen;">绿色</strong>框表示文字框设置样式后的位置。
+			</p>
+			<video controls src="assets/img/01.mp4"></video>
 		</div>
 		<div class="box1" id="b5">
-			<p>Nulla at magna purus. Donec venenatis, justo at tempor aliquam, libero diam pharetra nunc, at interdum dui metus vitae ex. Cras mattis, elit sed imperdiet dictum, orci tortor auctor magna, id imperdiet odio odio ac purus. Integer ac odio sed ante vestibulum efficitur. Phasellus mattis tempus mauris vitae sodales. Nulla bibendum quis tortor eu lacinia. Mauris lobortis ac arcu et lacinia. Proin in libero nisi. Maecenas lacinia justo justo, in suscipit mi vehicula quis. Pellentesque et placerat tortor, id consectetur orci. Aenean eu efficitur massa. Aliquam semper nibh et ipsum vestibulum, in volutpat justo ullamcorper.</p>
+			<p>先说到这儿吧……</p>
 		</div>
 	</section>
     <footer>
