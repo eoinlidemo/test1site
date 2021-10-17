@@ -74,22 +74,6 @@ section {
 	color: white;
 	font-size: 1em;
 }
-#b2 {
-	position: relative;
-	top: 150px;
-}
-#b3 {
-	position: relative;
-	top: 180px;
-}
-#b4 {
-	position: relative;
-	top: 210px;
-}
-#b5 {
-	position: relative;
-	top: 240px;
-}
 /* 标题及文字样式 */
 h1 {
 	font-size: 2.25em;
@@ -147,13 +131,13 @@ ol, ul {
 	color: yellow;
 }
 /* 交互控件与视频 */
-.interactive, video {
+.interactive, video, img {
 	background-color: rgba(200, 200, 200, 0.6);
 	width: 100%;
 	padding: 20px 10px;
 	margin: 10px 0;
 }
-video {
+video, img {
 	padding: 10px;
 }
 /* 底部 */

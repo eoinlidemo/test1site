@@ -5,10 +5,10 @@
     <link rel="stylesheet" type="text/css" href="assets/main.css">
     <style>
 		section {
-		height: 4150px;
+		height: 5100px;
 		}
 		#bg {
-			height: 4150px;
+			height: 5100px;
 		}
 	</style>
     <title>Demo | Introduction</title>
@@ -44,7 +44,7 @@
 			<h2>这是本项目的介绍页。</h2>
             <h3>Welcome to the introduction of this demo.</h3>
 		</div>
-		<div class="box1" id="b2">
+		<div class="box1">
             <p>上下滚动网页，你会发现本站的网页均由 3 个主要部分组成。</p>
             <ul>
                 <li>顶部的导航栏（页眉），滚动网页时不移动；</li>
@@ -61,7 +61,7 @@
 &lt;img 这是一个单标记元素，有关设置全部写在一个标记内部的斜杠之前。/&gt;
 			</code>
 		</div>
-		<div class="box1" id="b3">
+		<div class="box1">
 			<p>源代码中，我们用一个 <code>class</code> 为 <code>navbar</code> 的 <code>div</code> 元素来制作导航栏。
 				<br /><code>div</code> 元素是一个没有实际意义的块元素。块元素独占一行，我们可以给它设置上下左右任意方向的内外边距。
 				<br />导航栏中的每一个部分，包括左边的 <strong>DEMO</strong> 大字和右边的菜单项，它们的 <code>class</code> 属性均包含 <code>li</code> 这个名字。
@@ -85,7 +85,7 @@ body{margin: 0;}
 				如你所见，在此网站的网页中，这一点也得到了体现。
 			</p>
 		</div>
-		<div class="box1" id="b4">
+		<div class="box1">
 			<p>接下来就是一个很复杂的部分——定位。
 				<br />每个元素在网页中都会有特定的位置来显示，比如这个网页中的每一个写有文字的黑色方块都分别设定了各自的位置。
 				<br />设定位置这项工作也需要开发者在 CSS 样式代码中完成，需要用到元素的<strong>定位</strong>属性，<code>position</code>。
@@ -113,14 +113,42 @@ body{margin: 0;}
 				<br />值得注意的是，这两个属性不会对 <code>position</code> 设置为 <code>static</code> 的元素生效。
 				<br /><br />
 				这个项目中，顶部的导航栏采用 <code>fixed</code> 定位，背景采用 <code>absolute</code> 定位，文字框采用 <code>relative</code> 定位。
-				<br />每一个文字框都通过 <code>id</code> 选择器分别设置了 <code>top</code> 属性的值，且分别递增 30 像素，这样能够保证相邻两个文字框之间的垂直间隔均为 30 像素。
+				<br />每一个文字框都通过 JavaScript 分别设置了 <code>top</code> 属性的值，且分别递增 30 像素，这样能够保证相邻两个文字框之间的垂直间隔均为 30 像素。
 				<br />其逻辑在于，如果给文字框添加 <code>static</code> 定位，则所有的文字框将依次往下排放，中间没有空隙。第一个的文字框距离顶部有 120 像素高，为了保证文字框间距 30 像素，则需使用 <code>relative</code> 定位，将之后每一个文字框的 <code>top</code> 属性都递增 30 像素。
 				<br />视频后半部分的<strong style="color:lightcoral;">红色</strong>文字框表示文字框原本的位置，<strong style="color:lightgreen;">绿色</strong>框表示文字框设置样式后的位置。
 			</p>
 			<video controls src="assets/img/01.mp4"></video>
 		</div>
-		<div class="box1" id="b5">
-			<p>先说到这儿吧……</p>
+		<div class="box1">
+			<p>在网页设计中，HTML 和 CSS 被称为<strong>前端</strong>，因为这两个语言通常用来设计网页可以显示出的内容，也就是呈现给用户的内容；
+				<br />而刚才所说的 JavaScript，简称 <strong>JS</strong>，被称为<strong>后端</strong>，因为我们一般用这个语言来编写网页背后的计算和信息处理的任务，和 Python 有些许相似。
+				<br />为了避免把 CSS 写得过于重复和复杂，批量给元素添加相同的样式的时候，JavaScript 承担重任。
+				<br />本网站上网页的所有文字框的定位，都是使用 JavaScript 设置的。
+			</p>
+			<code class="blockCode">
+var tb = document.getElementsByClassName("box1");
+			</code>
+			<p>上面这行 JS 代码，获取了网页内每一个 <code>class</code> 为 <code>box1</code> 的元素，并将它们全部编进了一个列表——或者在 JS 中，我们称之为<strong>数组</strong>。这一点 JS 和 Python 非常相似。
+				<br />在 Python 中，<code>for</code> 循环用来遍历列表中的每一个元素，对遍历到的元素执行相同的代码。
+				<br />JS 同样也有 <code>for</code> 循环，只不过结构有些许不同——
+			</p>
+			<code class="blockCode">
+for ([initialization]; [condition]; [final-expression]){statement}
+			</code>
+			<p>
+				<code>[initialization]</code> 指用来表示每一个被遍历元素的变量，一般设为 <code>var i=0</code>；
+				<br /><code>[condition]</code> 指用来判断循环是否继续进行下去的判断句；
+				<br /><code>[final-expression]</code> 指每一次循环结束后执行的代码，一般设为 <code>i++</code>；
+				<br /><code>{statement}</code> 指循环的执行语句。
+				<br />让我们来思考一下……
+			</p>
+			<img src="assets/img/diagram.svg" />
+			<p>
+				这样，在 i 为 0 的时候，不会执行语句，因为第一个文本框的 <code>top</code> 属性已经于 CSS 设置好了；
+				<br />在 i 为 1 的时候，第二个文本框的 <code>top</code> 属性为 120 + 30 * 1 = 150 px;
+				<br />在 i 为 2 的时候，第二个文本框的 <code>top</code> 属性为 120 + 30 * 2 = 180 px;
+				<br />以此类推。
+			</p>
 		</div>
 	</section>
     <footer>
@@ -136,5 +164,6 @@ body{margin: 0;}
 			, or by <a href="mailto:muzheli0820@gmail.com">email</a>.
 		</div>
 	</footer>
+	<script type="text/javascript" src="assets/main.js"></script>
 </body>
 </html>
