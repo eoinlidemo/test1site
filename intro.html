@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/main.css">
+    <link rel="stylesheet" href="assets/highlight/atom-one-dark-reasonable.min.css">
     <style>
 		section {
-		height: 5100px;
+		height: 5200px;
 		}
 		#bg {
-			height: 5100px;
+			height: 5200px;
 		}
 	</style>
     <title>Demo | Introduction</title>
@@ -55,11 +56,9 @@
 				<br />HTML 网页中的所有可显示出的内容，全部都是元素。
 				<br />如你所见，这里写的 4 行文字，都在一个 <code>p</code> 元素的两个标签之内。
 				<br />元素分为单标记元素和双标记元素，它们的区别在于……</p>
-			<code class="blockCode">
-&lt;p&gt;这是一个双标记元素，首尾分别有一个标记，各表示元素的开始和结束。&lt;/p&gt;
-<br />
+			<pre class="hljs"><code>&lt;p&gt;这是一个双标记元素，首尾分别有一个标记，各表示元素的开始和结束。&lt;/p&gt;
 &lt;img 这是一个单标记元素，有关设置全部写在一个标记内部的斜杠之前。/&gt;
-			</code>
+</code></pre>
 		</div>
 		<div class="box1">
 			<p>源代码中，我们用一个 <code>class</code> 为 <code>navbar</code> 的 <code>div</code> 元素来制作导航栏。
@@ -69,11 +68,13 @@
 				<br />这两者的区别在于，<code>id</code> 具有唯一性，而 <code>class</code> 则不具有。全局上说，<code>id</code> 只能出现在一个特定的元素身上。
 				<br />开发者在 CSS 文件中通过形如 <code>.class</code>、<code>#id</code> 的方式指定特定元素并为其设定样式，<code>.</code> 和 <code>#</code> 符号因而分别被称为<strong>选择器</strong>。
 			</p>
-			<code class="blockCode">
-.类名{样式}
-<br />
-#id名{样式}
-			</code>
+			<pre class="hljs"><code>.className {
+    style
+}
+#identity {
+    style
+}
+</pre></code>
 			<p>
 				除此之外，直接使用元素名也可以设置样式，被称为元素选择器。这一点使用得也很常见：
 				<br />如果不加设置，根据 Google Chrome 等浏览器的预设，浏览器会自动给网页正文加入 8 像素的外边距，很影响美观。
@@ -125,16 +126,14 @@ body{margin: 0;}
 				<br />为了避免把 CSS 写得过于重复和复杂，批量给元素添加相同的样式的时候，JavaScript 承担重任。
 				<br />本网站上网页的所有文字框的定位，都是使用 JavaScript 设置的。
 			</p>
-			<code class="blockCode">
-var tb = document.getElementsByClassName("box1");
-			</code>
+			<pre class='hljs'><code>var tb = document.getElementsByClassName("box1");
+</code></pre>
 			<p>上面这行 JS 代码，获取了网页内每一个 <code>class</code> 为 <code>box1</code> 的元素，并将它们全部编进了一个列表——或者在 JS 中，我们称之为<strong>数组</strong>。这一点 JS 和 Python 非常相似。
 				<br />在 Python 中，<code>for</code> 循环用来遍历列表中的每一个元素，对遍历到的元素执行相同的代码。
 				<br />JS 同样也有 <code>for</code> 循环，只不过结构有些许不同——
 			</p>
-			<code class="blockCode">
-for ([initialization]; [condition]; [final-expression]){statement}
-			</code>
+			<pre class='hljs'><code>for ([initialization]; [condition]; [final-expression]){statement}
+</code></pre>
 			<p>
 				<code>[initialization]</code> 指用来表示每一个被遍历元素的变量，一般设为 <code>var i=0</code>；
 				<br /><code>[condition]</code> 指用来判断循环是否继续进行下去的判断句；
@@ -165,5 +164,9 @@ for ([initialization]; [condition]; [final-expression]){statement}
 		</div>
 	</footer>
 	<script type="text/javascript" src="assets/main.js"></script>
+	<script src="assets/highlight/highlight.min.js"></script>
+	<script>
+        hljs.initHighlightingOnLoad();
+    </script>
 </body>
 </html>
